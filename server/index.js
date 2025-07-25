@@ -8,6 +8,10 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
+app.get('/', (req, res) => {
+  res.send('Backend is running ✅');
+});
+
 
 // LEND: Create a new loan
 app.post('/api/v1/loans', (req, res) => {
