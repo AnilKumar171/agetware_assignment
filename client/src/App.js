@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const API_BASE_URL = 'http://localhost:5000/api/v1';
+const API_BASE_URL = 'https://agetware-assignment-1.onrender.com';
 
 // --- Main App Component ---
 export default function App() {
