@@ -202,11 +202,11 @@ function LedgerDetails({ data }) {
             <div className="info-grid">
                 <InfoItem label="Loan ID" value={data.loan_id} />
                 <InfoItem label="Customer ID" value={data.customer_id} />
-                <InfoItem label="Principal" value={`$${data.principal.toFixed(2)}`} />
-                <InfoItem label="Total Amount" value={`$${data.total_amount.toFixed(2)}`} />
-                <InfoItem label="Amount Paid" value={`$${data.amount_paid.toFixed(2)}`} />
-                <InfoItem label="Balance" value={`$${data.balance_amount.toFixed(2)}`} />
-                <InfoItem label="Monthly EMI" value={`$${data.monthly_emi.toFixed(2)}`} />
+                <InfoItem label="Principal" value={`Rs ${data.principal.toFixed(2)}`} />
+                <InfoItem label="Total Amount" value={`Rs ${data.total_amount.toFixed(2)}`} />
+                <InfoItem label="Amount Paid" value={`Rs ${data.amount_paid.toFixed(2)}`} />
+                <InfoItem label="Balance" value={`Rs ${data.balance_amount.toFixed(2)}`} />
+                <InfoItem label="Monthly EMI" value={`Rs ${data.monthly_emi.toFixed(2)}`} />
                 <InfoItem label="EMIs Left" value={data.emis_left} />
             </div>
             <h3 className="transactions-title">Transactions</h3>
@@ -224,7 +224,7 @@ function LedgerDetails({ data }) {
                             <tr key={tx.transaction_id}>
                                 <td className="table-cell">{new Date(tx.date).toLocaleDateString()}</td>
                                 <td className="table-cell">{tx.type}</td>
-                                <td className="table-cell align-right monospace">${tx.amount.toFixed(2)}</td>
+                                <td className="table-cell align-right monospace">Rs{tx.amount.toFixed(2)}</td>
                             </tr>
                         )) : (
                             <tr>
@@ -278,11 +278,11 @@ function AccountOverview() {
                         <div key={loan.loan_id} className="overview-loan-card">
                              <h3 className="overview-loan-title">Loan ID: {loan.loan_id}</h3>
                              <div className="info-grid">
-                                <InfoItem label="Principal" value={`$${loan.principal.toFixed(2)}`} />
-                                <InfoItem label="Total Interest" value={`$${loan.total_interest.toFixed(2)}`} />
-                                <InfoItem label="Total Amount" value={`$${loan.total_amount.toFixed(2)}`} />
-                                <InfoItem label="Amount Paid" value={`$${loan.amount_paid.toFixed(2)}`} />
-                                <InfoItem label="Balance" value={`$${loan.balance_amount.toFixed(2)}`} />
+                                <InfoItem label="Principal" value={`Rs ${loan.principal.toFixed(2)}`} />
+                                <InfoItem label="Total Interest" value={`Rs ${loan.total_interest.toFixed(2)}`} />
+                                <InfoItem label="Total Amount" value={`Rs ${loan.total_amount.toFixed(2)}`} />
+                                <InfoItem label="Amount Paid" value={`Rs ${loan.amount_paid.toFixed(2)}`} />
+                                <InfoItem label="Balance" value={`Rs ${loan.balance_amount.toFixed(2)}`} />
                                 <InfoItem label="EMIs Left" value={loan.emis_left} />
                              </div>
                         </div>
